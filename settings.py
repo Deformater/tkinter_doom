@@ -1,0 +1,38 @@
+from math import pi, tan
+
+
+# game settings
+WIDTH = 1440
+HEIGHT = 720
+HALF_WIDTH = WIDTH // 2
+HALF_HEIGHT = HEIGHT // 2
+SIZE = WIDTH, HEIGHT
+SCREEN_NAME = 'GAME'
+SQUARE_SIDE = 120
+MINI_MAP_SCALE = 10
+
+# colors
+WHITE = 'white'
+BLACK = 'black'
+RED = 'red'
+BLUE = (0, 0, 255)
+GREY = (120, 120, 120)
+
+# player settings
+KEY_BUTTONS = ['w', 'a', 's', 'd', '<Left>', '<Right>']
+PLAYER_POS = HALF_WIDTH, HALF_HEIGHT
+PLAYER_ANGLE = 0
+PLAYER_SPEED = 5
+PLAYER_ANGLE_SPEED = 0.03
+PLAYER_COLOR = RED
+PLAYER_SIZE = 10
+
+# ray casting
+FOV = pi / 3
+HALF_FOV = FOV / 2
+NUM_RAYS = 360
+SCALE = WIDTH / NUM_RAYS
+DELTA_ANGLE = FOV / NUM_RAYS
+MAX_DEPTH = WIDTH
+DISTANCE = NUM_RAYS / (2 * tan(HALF_FOV))
+PROJ_COEFF = 3 * DISTANCE * SQUARE_SIDE
