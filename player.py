@@ -3,7 +3,7 @@ from math import sin, cos
 
 
 class Player:
-    def __init__(self, screen):
+    def __init__(self):
         self.pos = PLAYER_POS
         self.angle = PLAYER_ANGLE
         self.speed = PLAYER_SPEED
