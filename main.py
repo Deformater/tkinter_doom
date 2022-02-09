@@ -5,7 +5,6 @@ from game import Game
 from mini_map import MiniMap
 
 
-# инициализация
 def main():
     root = Tk()
     root.geometry(f'{WIDTH}x{HEIGHT}')
@@ -15,7 +14,6 @@ def main():
     main_canvas.place(x=0, y=0)
 
     player = Player()
-
     mini_map_canvas = Canvas(root, bg=BLACK, width=MINI_MAP_WIDTH, height=MINI_MAP_HEIGHT)
     mini_map_canvas.place(x=MINI_MAP_POS[0], y=MINI_MAP_POS[1])
 
@@ -23,6 +21,8 @@ def main():
     game = Game(main_canvas, player, mini_map)
 
     game.drawing()
+    mini_map.drawing()
+
     root.mainloop()
 
 
